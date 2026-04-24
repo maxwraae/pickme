@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pickme"
+version = "0.1.0"
+description = "Tn5 construct verification for 96-well plates"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+authors = [{name = "Max Wraae"}]
+dependencies = [
+    "biopython>=1.83",
+    "snapgene-reader>=0.1.20",
+    "pysam>=0.22",
+    "openpyxl>=3.1",
+    "numpy",
+    "pandas",
+    "textual>=0.60",
+]
+
+[project.scripts]
+pickme = "pickme.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pickme*", "tn5verify*"]
