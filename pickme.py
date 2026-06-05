@@ -1167,8 +1167,11 @@ def write_xlsx(results, path):
 
 def main():
     ap = argparse.ArgumentParser(
-        description="Standalone Tn5 construct verification — drop in a folder of "
-                    "FASTQs + .gb references and run.")
+        prog="pickme.py",
+        description="pickme — 'can I pick this clone?'. Drop this in a folder of "
+                    "paired FASTQs + .gb reference maps and run; get a colored "
+                    "plate map of which construct is in each well and whether "
+                    "it's clean. Pure Python, runs on any Mac/Windows.")
     ap.add_argument("folder", nargs="?", default=".", help="Folder to scan.")
     ap.add_argument("--fastq", help="FASTQ folder (default: auto-detect).")
     ap.add_argument("--refs", help="Reference folder (default: auto-detect).")
