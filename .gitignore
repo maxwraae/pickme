@@ -1,20 +1,15 @@
-# Data — users drop runs in input/, results land in output/
-input/*/
-output/*/
-!input/.gitkeep
-!output/.gitkeep
-
-# Python
+pickme_results/
+input/
+output/
+*.egg-info/
 __pycache__/
 *.pyc
-*.pyo
-*.egg-info/
-.pytest_cache/
-build/
-dist/
-
-# OS / editors
+*.bam
+*.bai
+*.fastq
+*.fastq.gz
+*.fa
+*.fai
 .DS_Store
-~$*.xlsx
-.vscode/
-.idea/
+.venv/
+venv/
